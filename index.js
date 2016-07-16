@@ -3,9 +3,13 @@ const request = require("request"),
     open = require('open'),
     moment = require('moment'),
     _ = require('lodash');
-
+    
+/** THINGS YOU CAN CHANGE */
 let _checkInterval = 30000; // 30s.
 let _youtubeURL = 'https://www.youtube.com/watch?v=LHaGDT6Pdbk'; // Alert URL
+/** END OF THINGS YOU CAN CHANGE */
+
+
 
 let _callers = {
     BookMyShow: 'BookMyShow',
@@ -81,7 +85,7 @@ function updateStatus(result, caller) {
         clearInterval(_timers[caller]);
     }
     else {
-        console.log(`[${moment()}]:[${caller}]: I'm waiting.."`);
+        console.log(`[${moment()}]:[${caller}]: Still waiting..`);
     }
 }
 
