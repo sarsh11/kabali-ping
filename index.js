@@ -9,7 +9,7 @@ const request = require("request"),
 
 let _timers = {};
 /** THINGS YOU CAN CHANGE */
-let _checkInterval = 2000; // 30s.
+let _checkInterval = 30000; // 30s.
 let _youtubeURL = 'https://www.youtube.com/watch?v=LHaGDT6Pdbk'; // Alert URL
 /** END OF THINGS YOU CAN CHANGE */
 
@@ -71,6 +71,13 @@ function isBookingOpened(caller) {
         }
     });
 }
+
+// Call once as soon as the App is started.
+
+isBookingOpened(_callers.BookMyShow);
+isBookingOpened(_callers.TicketNew);
+
+// Setting timers to call every _checkInterval/1000 s.
 
 _timers[_callers.BookMyShow] = setInterval(() => {
     isBookingOpened(_callers.BookMyShow);
