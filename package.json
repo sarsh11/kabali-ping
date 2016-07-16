@@ -1,0 +1,21 @@
+{
+  "name": "kabali-fdfs",
+  "version": "1.0.0",
+  "description": "Pings TicketNew and BookMyShow periodically to check if bookings have opened.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sarsh11/kabali-ping.git"
+  },
+  "author": "Sathiya S",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "moment": "^2.14.1",
+    "open": "0.0.5",
+    "request": "^2.73.0"
+  }
+}
