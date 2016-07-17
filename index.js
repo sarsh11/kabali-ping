@@ -15,7 +15,7 @@ let _youtubeURL = 'https://www.youtube.com/watch?v=LHaGDT6Pdbk'; // Alert URL
 
 
 function _computeTicketNewStatus(data) {
-    return data.JsonDateDTOItems && data.JsonDateDTOItems.length > 0;
+    return data.Venues && data.Venues.length > 1;
 }
 
 function _computeBookMyShowStatus(events) {
@@ -60,7 +60,7 @@ function isBookingOpened(caller) {
             if (caller === _callers.BookMyShow)
                 data = JSON.parse(body);
             if (data.d) {
-                return updateStatus(_computeTicketNewStatus(data.d), _callers.TicketNew);
+                return updateStatus(_computeTicketNewStatus(JSON.parse(data.d)), _callers.TicketNew);
             }
             else if (data.moviesData) {
                 return updateStatus(_computeBookMyShowStatus(data.moviesData.BookMyShow.arrEvents), _callers.BookMyShow)

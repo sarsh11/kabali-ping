@@ -30,13 +30,13 @@ _options[_callers.BookMyShow] = {
 }
 _options[_callers.TicketNew] = {
     method: 'POST',
-    url: 'http://www.ticketnew.com/onlinetheatre/online-movie-ticket-booking/GetJsonDataForMoviePage.asmx/GetScheduleDates_MovieId_RegionIds',
+    url: 'http://www.ticketnew.com/onlinetheatre/online-movie-ticket-booking/GetJsonDataForMoviePage.asmx/GetVenueTimes_MovieId_RegionIds',
     headers:
     {
         'cache-control': 'no-cache',
         'content-type': 'application/json'
     },
-    body: { MovieId: 12188, RegionIds: '1' },
+    body: {'MovieId':'12188','RegionIds':'1','ChoiceDate':'2016-7-22'},
     json: true
 }
 
