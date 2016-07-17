@@ -15,7 +15,7 @@ let _youtubeURL = 'https://www.youtube.com/watch?v=LHaGDT6Pdbk'; // Alert URL
 
 
 function _computeTicketNewStatus(data) {
-    return data.Venues && data.Venues.length > 1;
+    return data.Venues && data.Venues.length > 2;
 }
 
 function _computeBookMyShowStatus(events) {
