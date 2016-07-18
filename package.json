@@ -13,6 +13,7 @@
   "author": "Sathiya S",
   "license": "ISC",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "lodash": "^4.13.1",
     "moment": "^2.14.1",
     "open": "0.0.5",

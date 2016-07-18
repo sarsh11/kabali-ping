@@ -8,14 +8,7 @@ let _callers = {
 let _options = {}
 _options[_callers.BookMyShow] = {
     method: 'GET',
-    url: 'https://in.bookmyshow.com/serv/getData',
-    qs:
-    {
-        cmd: 'QUICKBOOK',
-        type: 'MT',
-        getRecommendedData: '1',
-        _: '1468652879819'
-    },
+    url: 'https://in.bookmyshow.com/buytickets/kabali-chennai/movie-chen-ET00039091-MT/20160722#!quickbook',
     headers:
     {
         'postman-token': '46f9aa3b-38e2-7ada-679e-88febb7dd1d8',
